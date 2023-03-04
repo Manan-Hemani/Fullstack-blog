@@ -76,8 +76,7 @@ $lightGreen: #b9e7e7;
                 }
                 .links {
                     display: flex;
-                    align-items: baseline;
-                    
+                    align-items: baseline; //baseline
                     gap: 10px;
 
                     h6 {
@@ -111,7 +110,7 @@ $lightGreen: #b9e7e7;
         }
 
         //FOOTER
-        .footer{
+        footer{
             margin-top: 100px;
             padding: 20px;
             background-color: $lightGreen;
@@ -126,6 +125,7 @@ $lightGreen: #b9e7e7;
         }
 
         // HOME
+
         .home{
             .posts{
                 margin-top: 50px;
@@ -144,17 +144,17 @@ $lightGreen: #b9e7e7;
                     .img{
                         font: 2;
                         position: relative;
-
-                        &::after{
-                            content: "";
-                            width: 100%;
-                            height: 100%;
-                            background-color: $lightGreen;
-                            position: absolute;
-                            top: 20px;
-                            left: -20px;
-                            z-index: -1;
-                        }
+                        box-shadow: 15px 15px 0 $lightGreen;
+                        // &::after{
+                        //     content: "";
+                        //     width: 100%;
+                        //     height: 100%;
+                        //     background-color: $lightGreen;
+                        //     position: absolute;
+                        //     top: 20px;
+                        //     left: -20px;
+                        //     z-index: -1;
+                        // }
 
                         img{
                             width: 100%;
@@ -183,8 +183,8 @@ $lightGreen: #b9e7e7;
                             border: none;
                             cursor: pointer;
                             background-color: white;
-                            color: teal;
                             border: 1px solid teal;
+                            color: teal;
 
                             &:hover{
                                 border: 1px solid white;
@@ -198,6 +198,7 @@ $lightGreen: #b9e7e7;
         }
 
         // single
+
         .single{
             display: flex;
             gap: 50px;
@@ -219,7 +220,6 @@ $lightGreen: #b9e7e7;
                     align-items: center;
                     gap: 10px;
                     font-size: 14px;
-
                     img{
                         width: 50px;
                         height: 50px;
@@ -234,6 +234,7 @@ $lightGreen: #b9e7e7;
 
                 .edit{
                     display: flex;
+                    align-items: center;
                     gap: 5px;
 
                     img{
@@ -250,7 +251,7 @@ $lightGreen: #b9e7e7;
 
                 p{
                     text-align: justify;
-                    line-height: 20px;
+                    line-height: 30px;
                 }
             }
 
@@ -261,7 +262,7 @@ $lightGreen: #b9e7e7;
                 gap: 25px;
 
                 h1{
-                    font-size: 12px;
+                    font-size: 20px;
                     color: #555;
                 }
 
@@ -285,8 +286,8 @@ $lightGreen: #b9e7e7;
                         padding: 7.5px 15px;
                         border: none;
                         cursor: pointer;
-                        background-color: white;
                         color: teal;
+                        background-color: white;
                         border: 1px solid teal;
 
                         &:hover{
@@ -294,7 +295,6 @@ $lightGreen: #b9e7e7;
                             background-color: $lightGreen;
                             color: black; 
                         }
-
                     }
                 }
             }

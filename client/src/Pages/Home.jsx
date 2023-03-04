@@ -3,39 +3,45 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
-    const posts =[    
+    const posts = [
         {
-            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRbbG0nw3LUFkD0ICxa-KoTFzZrIlX-2-sCCfhm8tPpQ&usqp=CAU&ec=48600112",
-            "id": 1,
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis euismod, varius lorem non, hendrerit mi. Nam auctor enim id augue fringilla scelerisque. Morbi quis tortor malesuada, ullamcorper libero sed, dignissim felis.",        
-            "title": "Post Title 1"    }
-            ,    
-            {        
-                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5YYCvvzh1k-9QItiTSEKcs2xhFRsmeKUIv6ZUIUzufg&usqp=CAU&ec=48600112",        
-                "id": 2,        
-                "desc": "Sed aliquam elit sed diam gravida, nec eleifend nisi lobortis. Aliquam at enim interdum, bibendum lectus eu, rutrum nibh. Duis euismod felis sit amet est euismod, sed aliquam enim mollis.",        
-                "title": "Post Title 2"    
-            },    
-            {        
-                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkmJ854SylxiYbD0s0YEVpJRLCFGuNgMbYR6KXXI9v8A&usqp=CAU&ec=48600112",        
-                "id": 3,        
-                "desc": "Vestibulum luctus purus id velit blandit, id congue dui sodales. Sed venenatis risus nec metus ullamcorper, sed dictum ipsum efficitur. Nullam ac tortor eget sapien maximus consectetur.",        
-                "title": "Post Title 3"    
-            }
-        ]
+            id: 1,
+            title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
+            img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        },
+        {
+            id: 2,
+            title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
+            img: "https://images.pexels.com/photos/6489663/pexels-photo-6489663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        },
+        {
+            id: 3,
+            title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
+            img: "https://images.pexels.com/photos/4230630/pexels-photo-4230630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        },
+        {
+        id: 4,
+            title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
+            img: "https://images.pexels.com/photos/6157049/pexels-photo-6157049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        },
+    ];
 
     return (
         
         <div className="home">
             <div className="posts">
-                {posts.map( post => (
-                    <div className="post" id={post.id}>
-                        <div classNmae="img">
+                {posts.map( (post) => (
+                    <div className="post" key={post.id}>
+                        <div className="img">
                             <img src={post.img} alt="img"/>
                         </div>
                         <div className="content">
                             <Link className="link" to={`/post/${post.id}`}>
-                                <h1>{post.item}</h1>
+                                <h1>{post.title}</h1>
                             </Link>
                             <p>{post.desc}</p>
                             <button>Read More</button>
