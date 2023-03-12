@@ -2,8 +2,10 @@ import express from 'express';
 
 const router = express.Router();
 
-router.get("/",(req,res) => {
-    res.json("this is post");
-})
+router.get("/",)
+router.get("/:id",)
+router.post("/",)
+router.delete("/:id",)
+router.put("/:id",)
 
 export default router;
